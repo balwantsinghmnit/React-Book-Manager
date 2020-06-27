@@ -38,7 +38,7 @@ function App() {
 
   const deleteBook = (title)=>
   {
-    setBooks(books.filter(book=>book.title!=title));
+    setBooks(books.filter(book=>book.title!==title));
   }  
   return (
       <Router>
@@ -74,7 +74,8 @@ function App() {
               <Book books={books} deleteBook={deleteBook}/>
               </React.Fragment>
               )} />
-              <Route path="/about" component={About}/>
+              <Route exact path="/about" render={props=>(
+                <About/>)}/>
         </div>
       </Router>
   );

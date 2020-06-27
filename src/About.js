@@ -3,9 +3,6 @@ import photo from "./new.jpg";
 
 function About(props) {
 
-	const deleteBook = ()=>{
-		props.deleteBook(props.book.title);
-	}
   return (
   		<center>
 		  	<div className="card mt-5" style={{width:"400px"}}>
